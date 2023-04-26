@@ -1,0 +1,389 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    line-height: 1.4;
+    color: #3c393d;
+}
+img{
+    width: 100%;
+    display: block;
+}
+.container{
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 1.2rem;
+}
+
+/* Header section css */
+header{
+    height: 100vh;
+    background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0, 0, 0, 0.4)), url(../img/banner/banner.jpg);
+    background-position: center ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment:fixed ;
+}
+.navbar{
+    /* background: rgba(0,0,0,0.6); */
+    padding: 1.2rem;
+}
+.navigation{
+    display: flex;
+    justify-content: space-between;
+}
+#nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 2.5rem;
+    background-color: rgba(0, 0, 0, 0.500);
+    box-shadow: 5px 3px 16px 0px rgb(141, 141, 141);
+    z-index: 1
+}
+.navigation .logo a{
+    color: #fff;
+    font-size: 2rem;
+    display: block;
+    text-decoration: none;
+    font-family:'Times New Roman', Times, serif;
+    letter-spacing: 1px;
+}
+.navbar-nav{
+    padding:0.8rem 0 0.2rem 0 ;
+}
+.navbar-nav a{
+    text-transform: uppercase;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 3px;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding-right: 1.2rem;
+    padding-left: 1.2rem;
+    transition: color 0.4s ease;
+}
+.navbar-nav a:hover{
+    color: chocolate;
+}
+.banner{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    margin-top: 15%;
+}
+.banner-title{
+    font-size: 5rem;
+    font-family: 'Playfair Display', serif;
+    line-height: 1.2;
+}
+.banner-title span{
+    font-family: 'Playfair Display', serif;
+    color: chocolate;
+}
+.banner p{
+    padding: 1rem 0 2rem 0;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    font-family: sans-serif;
+    font-weight: 300;
+    word-spacing: 2px;
+}
+.banner form{
+    background: #fff;
+    border-radius: 2rem;
+    padding: 0.6rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.4rem;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.search-input{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+    outline: none;
+    padding: 0.6rem 0;
+    border: none;
+}
+.search-input::placeholder{
+    text-transform: capitalize;
+}
+.search-btn{
+    width: 40px;
+    font-size: 1.2rem;
+    color: #3c393d;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+}
+/* End of header css */
+
+
+/* haqimizda css */
+.haqimizda{
+    padding: 4.5rem 0;
+}
+.haqimizda-content{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 3rem;
+    align-items: center;
+}
+.haqimizda-text{
+    margin: 2rem 0;
+}
+.haqimizda-text p{
+    font-size: 1.rem;
+    padding: .6rem 0;
+    opacity: .8;
+}
+/* haqimizda css */
+
+
+/* kitoblar css */
+.kitoblar{
+    padding: 4.5rem 0;
+}
+.title{
+    text-align: center;
+    padding:1rem 0;
+}
+.title h2{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.4rem;
+}
+.title p{
+    text-transform: uppercase;
+    padding: 0.6rem 0;
+}
+.kitoblar-content{
+    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 2rem;
+}
+.kitoblar-item{
+    cursor: pointer;
+    margin: 0;
+}
+.kitoblar-img{
+    position: relative;
+    overflow: hidden;
+}
+.kitoblar-img::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: rgba(0, 0, 0, 0.055); */
+}
+.kitoblar-img img{
+    transition: all 0.5s;
+}
+.kitoblar-item:hover img{
+    transform: scale(1.1);
+    /* transform: translateY(-10px); */
+}
+.kitoblar-img span:first-of-type{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #0000004d;
+    padding: 0.25rem 1rem;
+    color: #fff;
+    z-index: 1;
+}
+.kitoblar-img span:last-of-type{
+    position: absolute;
+    z-index: 1;
+    bottom: 10px;
+    right: 10px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+.kitoblar-title{
+    font-size: 1.2rem;
+    text-align: center;
+    width: 100%;
+    margin: 0.6rem 0;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+.kitoblar-title a{
+    color: #000000;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-family: 'Times New Roman', Times, serif;
+    transition: all 0.4s ease;
+}
+.kitoblar-title a:hover{
+    color: rgb(255, 8, 8);
+}
+.malumot p{
+    padding: 0.3rem 0;
+}
+.malumot .muallif{
+    font-family: 'Times New Roman', Times, serif;
+    color: #000;
+    font-weight: 800;
+}
+.malumot .kitob-nomi{
+    font-family: 'Times New Roman', Times, serif;
+    color: #000000ce;
+}
+.malumot p i{
+    color: #000;
+    padding-right: 3%;
+}
+/* End of kitoblar */
+
+
+/* Blog section */
+.blog{
+    background: #f9f9f9f9;
+    padding: 4.5rem 0;
+}
+.blog-content{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+    margin: 2rem 0;
+}
+.blog-img{
+    position: relative;
+}
+.blog-img span{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: #3c393d;
+    color: #fff;
+    font-size: 1.4rem;
+    padding: 0.3rem 0.6rem;
+}
+.blog-text span{
+    font-weight: 300;
+    display: block;
+    padding-bottom: 0.5rem;
+}
+.blog-text{
+    max-width: 2.2rem 0;
+    padding: 0 1rem;
+}
+.blog-text h2{
+    font-family: 'Times New Roman', Times, serif;
+    padding: 1rem 0;
+    font-size: 1.65rem;
+    font-weight: 500;  
+}
+.blog-text p{
+    font-weight: 300;
+    font-size: 1.1rem;
+    opacity: 0.8;
+    padding-bottom:1.2rem ;
+}
+.blog-text a{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: #3c393d;
+    color: #fff;
+    padding: .55rem 1.2rem;
+    background: #000;
+    transition: all .5s ease;
+}
+.blog-text a:hover{
+    background: #2b2b2b;
+}
+/* Blog section */
+
+/* about section */
+.about{
+    padding: 4.5rem 0;
+}
+.about-content{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 3rem;
+    align-items: center;
+}
+.about-text{
+    margin: 2rem 0;
+}
+.about-text p{
+    font-size: 1.rem;
+    padding: .6rem 0;
+    opacity: .8;
+}
+/* about section */
+
+/* footer css */
+footer{
+    background: #3c393d;
+    color: #fff;
+    text-align: center;
+    padding:2rem 0 ;
+}
+.social-links{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.4rem;
+}
+.social-links a{
+    border:  2px solid black;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0 .3rem;
+    transition: all .5s ease;
+}
+.social-links a:hover{
+    background: #fff;
+    color: #3c393d;
+}
+footer span{
+    margin-top: 1rem;
+    display: block;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 2px;
+}
+/* footer css */
+.navbar-nav i{
+    display: none;
+}
+
+@media only screen and (max-width:800px) {
+    .navbar-nav a{
+        display: none;
+    }
+    .navbar-nav i{
+        display: block;
+    }
+    .banner-title{
+        font-size:3.5rem;
+    }
+    .design-content{
+        margin: 2rem 0;
+        grid-template-columns: repeat(3,1fr);
+    }
+ 
+}
